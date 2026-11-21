@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nandha SSC Jobs Hub</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f6fc;
+  color: #172b4d;
+}
+header {
+  background: #123d78;
+  color: white;
+  padding: 22px 16px;
+  text-align: center;
+}
+header h1 {
+  font-size: 25px;
+}
+header p {
+  margin-top: 8px;
+  color: #dceaff;
+}
+nav {
+  background: white;
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  box-shadow: 0 2px 8px #ddd;
+}
+nav a {
+  text-decoration: none;
+  color: #123d78;
+  font-weight: bold;
+}
+.hero {
+  background: linear-gradient(120deg,#123d78,#2678cf);
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+.hero h2 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+.hero p {
+  margin-bottom: 20px;
+}
+.search {
+  width: 90%;
+  max-width: 500px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 22px 15px;
+}
+.section-title {
+  margin: 15px 0;
+  color: #123d78;
+}
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 16px;
+}
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #dce3ee;
+  border-left: 5px solid #2678cf;
+}
+.job-card h3 {
+  color: #123d78;
+  margin-bottom: 12px;
+}
+.job-card p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #1765b5;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.info {
+  background: white;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 2;
+}
+footer {
+  background: #123d78;
+  color: white;
+  padding: 22px;
+  text-align: center;
+  margin-top: 30px;
+}
+#language {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+@media(max-width:600px) {
+  header h1 {font-size: 21px;}
+  .hero h2 {font-size: 22px;}
+  nav {gap: 12px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎓 NANDHA SSC JOBS HUB</h1>
+  <p id="tagline">Your Government Job Search Starts Here</p>
+</header>
+
+<nav>
+  <a href="#home" id="navhome">Home</a>
+  <a href="#jobs" id="navjobs">Latest Jobs</a>
+  <a href="#results" id="navresults">Results</a>
+  <a href="#about" id="navabout">About</a>
+  <select id="language" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="te">తెలుగు</option>
+  </select>
+</nav>
+
+<section class="hero" id="home">
+  <h2 id="welcome">Find Your Dream Government Job</h2>
+  <p id="subtitle">Latest SSC Notifications, Results & Updates</p>
+  <input class="search" id="search"
+    type="text"
+    placeholder="Search SSC CGL, CHSL, MTS, GD..."
+    oninput="searchJobs()">
+</section>
+
+<main class="container">
+
+<h2 class="section-title" id="jobtitle">
+  📢 SSC Job Categories
+</h2>
+
+<div class="jobs" id="jobs">
+
+<div class="job-card">
+<h3>SSC CGL</h3>
+<p>Combined Graduate Level Examination</p>
+<p>Qualification: Graduation</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Official Website</a>
+</div>
+
+<div class="job-card">
+<h3>SSC CHSL</h3>
+<p>Combined Higher Secondary Level</p>
+<p>Qualification: 12th Pass</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Official Website</a>
+</div>
+
+<div class="job-card">
+<h3>SSC MTS</h3>
+<p>Multi Tasking Staff Examination</p>
+<p>Qualification: 10th Pass</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Official Website</a>
+</div>
+
+<div class="job-card">
+<h3>SSC GD</h3>
+<p>Constable Examination</p>
+<p>Qualification: 10th Pass</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Official Website</a>
+</div>
+
+<div class="job-card">
+<h3>SSC CPO</h3>
+<p>Sub Inspector Examination</p>
+<p>Qualification: Graduation</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Official Website</a>
+</div>
+
+<div class="job-card">
+<h3>SSC Stenographer</h3>
+<p>Stenographer Grade C & D</p>
+<p>Qualification: 12th Pass</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Official Website</a>
+</div>
+
+</div>
+
+<section class="info" id="results">
+<h2 id="resulttitle">📋 Results & Admit Cards</h2>
+<p id="resulttext">
+Check official SSC results, admit cards and examination updates.
+</p>
+<a class="btn" href="https://ssc.gov.in/"
+target="_blank">Check Official Updates</a>
+</section>
+
+<section class="info" id="about">
+<h2 id="abouttitle">About Us</h2>
+<p id="abouttext">
+Nandha SSC Jobs Hub provides a simple platform
+to find SSC job categories, examination information
+and official government job links.
+</p>
+</section>
+
+<section class="info">
+<h2>⚠️ Important Notice</h2>
+<p>
+This website is an independent information portal.
+Always verify vacancies, dates, eligibility and fees
+on the official SSC website before applying.
+Sample categories are not confirmed live vacancies.
+</p>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 NANDHA SSC JOBS HUB</p>
+<p>Made with ❤️ for Government Job Aspirants</p>
+<a style="color:white" href="https://ssc.gov.in/">
+Official SSC Portal
+</a>
+</footer>
+
+<script>
+function searchJobs() {
+  let input = document.getElementById("search")
+    .value.toLowerCase();
+
+  let cards = document.querySelectorAll(".job-card");
+
+  cards.forEach(card => {
+    card.style.display =
+      card.innerText.toLowerCase().includes(input)
+      ? "block" : "none";
+  });
+}
+
+const translations = {
+  te: {
+    tagline: "మీ ప్రభుత్వ ఉద్యోగ అన్వేషణ ఇక్కడ ప్రారంభం",
+    navhome: "హోమ్",
+    navjobs: "ఉద్యోగాలు",
+    navresults: "ఫలితాలు",
+    navabout: "మా గురించి",
+    welcome: "మీ ప్రభుత్వ ఉద్యోగాన్ని వెతుక్కోండి",
+    subtitle: "SSC నోటిఫికేషన్లు, ఫలితాలు మరియు సమాచారం",
+    jobtitle: "📢 SSC ఉద్యోగ విభాగాలు",
+    resulttitle: "📋 ఫలితాలు మరియు హాల్ టికెట్లు",
+    resulttext: "SSC ఫలితాలు, హాల్ టికెట్లు మరియు పరీక్ష వివరాలను అధికారిక వెబ్‌సైట్‌లో చూడండి.",
+    abouttitle: "మా గురించి",
+    abouttext: "Nandha SSC Jobs Hub ద్వారా SSC ఉద్యోగాలు, పరీక్షల సమాచారం మరియు అధికారిక లింకులను తెలుసుకోవచ్చు."
+  },
+  en: {
+    tagline: "Your Government Job Search Starts Here",
+    navhome: "Home",
+    navjobs: "Latest Jobs",
+    navresults: "Results",
+    navabout: "About",
+    welcome: "Find Your Dream Government Job",
+    subtitle: "Latest SSC Notifications, Results & Updates",
+    jobtitle: "📢 SSC Job Categories",
+    resulttitle: "📋 Results & Admit Cards",
+    resulttext: "Check official SSC results, admit cards and examination updates.",
+    abouttitle: "About Us",
+    abouttext: "Nandha SSC Jobs Hub provides a simple platform to find SSC job categories, examination information and official government job links."
+  }
+};
+
+function changeLanguage() {
+  let lang = document.getElementById("language").value;
+  let data = translations[lang];
+
+  Object.keys(data).forEach(id => {
+    document.getElementById(id).innerText = data[id];
+  });
+
+  document.getElementById("search").placeholder =
+    lang === "te"
+    ? "SSC CGL, CHSL, MTS, GD వెతకండి..."
+    : "Search SSC CGL, CHSL, MTS, GD...";
+}
+</script>
+
+</body>
+</html>
